@@ -142,7 +142,7 @@ def main():
 
     for xval_nr in range(xval_count):
         x_train, y_train,  x_test, y_test = next(random_splitter)
-        model = IAALVQ(max_iter=50, prototypes_per_class=2, omega_rank=400, seed=59,
+        model = IAALVQ(max_iter=100, prototypes_per_class=2, omega_rank=400, seed=59,
                 regularization=0.00001, omega_locality='PW', filter_bank=None,
                 block_eye=False, norm=False, correct_imbalance=True)
     # X1[np.all(X1 == 0, axis=1), :] += 1e-12  
@@ -172,3 +172,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
